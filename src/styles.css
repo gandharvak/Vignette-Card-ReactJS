@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #db0000;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* render-div */
+.render-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* card css */
+
+.card {
+  width: 15rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.card img {
+  overflow: hidden;
+}
+
+.card-body {
+  position: absolute;
+  bottom: -20rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  color: var(--white);
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover .card-body {
+  bottom: 0;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+}
+
+/* explore card css */
+.explore-card {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.img-div {
+  width: 13rem;
+  overflow: hidden;
+}
+
+.explore-card-body {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(0, 0, 0, 1) 28%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: absolute;
+  color: var(--white);
+  height: 100%;
+}
+
+.explore-card-body div {
+  margin: 1rem 0 0 15rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .explore-card {
+    display: block;
+    height: 50vh;
+  }
+  .img-div {
+    width: 100vw;
+  }
+
+  .explore-card-body {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    bottom: 0;
+    height: 200px;
+  }
+  .explore-card-body div {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .explore-card-body {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(0, 0, 0, 1) 28%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .explore-card-body {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(0, 0, 0, 1) 22%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .explore-card-body {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(0, 0, 0, 1) 18%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .explore-card-body {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0) 0%,
+      rgba(0, 0, 0, 1) 17%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
